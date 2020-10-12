@@ -1,21 +1,15 @@
 package org.bris;
 
-import java.io.IOException;
-
 public class ViesmannAPI {
 	
 
 	public static void main(String[] args) {
-//		String token = "";
-//		try {
-//			token = TokenRequester.getAccessToken();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		System.out.println("Token :" + token);
-		ViCareService vicareService = new ViCareService();
-		vicareService.getNewToken();
-		vicareService.printAPI();
+
+		Configuration config = new Configuration("service.config");		
+		
+		ViCareService vicareService = new ViCareService(config);
+		System.out.println("Install ID " + vicareService.getInstallationId());
+		System.out.println("Gateway ID " + vicareService.getGatewayId());
 	}
 
 }

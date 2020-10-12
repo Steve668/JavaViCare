@@ -1,7 +1,8 @@
 package org.bris;
 
-public class ViCareGasBoiler {
+public class ViCareGasBoiler extends VicareDevice {
 
+	
 	private String burnerActive;
 	private String gasConsumptionHeatingDays;
 	private String gasConsumptionHeatingToday;
@@ -24,6 +25,10 @@ public class ViCareGasBoiler {
 	private String currentPower;
 	private String burnerHours;
 	private String burnerStarts;
+	
+	public ViCareGasBoiler(ViCareService service) {
+		super(service);
+	}
 
 	public String getGetBurnerActive() {
 		return burnerActive;
