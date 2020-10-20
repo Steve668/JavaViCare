@@ -10,6 +10,8 @@ public class ViesmannAPI {
 		ViCareService vicareService = new ViCareService(config);
 		System.out.println("Install ID " + vicareService.getInstallationId());
 		System.out.println("Gateway ID " + vicareService.getGatewayId());
+		ViCareGasBoiler boiler = new ViCareGasBoiler(vicareService);
+		System.out.println(boiler.getGasConsumptionHeatingToday());
 	}
 
 }

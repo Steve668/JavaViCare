@@ -48,6 +48,7 @@ public class TokenRequester {
         @SuppressWarnings("unchecked")
 		Map<String,Object> responseMap = new ObjectMapper().
                 readValue(response.body().byteStream(), HashMap.class);
+        response.close();
         return (String)responseMap.get("access_token");
 	}
 
@@ -66,6 +67,7 @@ public class TokenRequester {
         Response response = client.newCall(request).execute();
         String location = response.header("Location");
         String[] temp = location.split("code=");
+        response.close();
 		return temp[1];
 	}
 
