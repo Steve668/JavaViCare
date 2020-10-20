@@ -1,8 +1,19 @@
 # JavaViCare
-This is a Java API to connect to the Viessmann Vicare Service.
-The following devices are yet implemented:
-- GasBoiler
+This is a Java Tool to connect to the Viessmann Vicare Service.
 
+## Project status
+The following devices are implemented:
+- General Service to generate an OAuth-Token and access the API
+- GasBoiler Device
+
+## Usage
+Add your username and password from your Viessmann-App to the configuration file and start exploring the values of your heating.
+
+## Credit
+Thanks for the helpful information found in the Project PyViCare.
+<br/>
+Check out Simon Gillet's Python based approach: 
+https://github.com/somm15/PyViCare
 
 Feel free to donate if you like to support my work (there is a lot of coffee involved):
 <br/>
