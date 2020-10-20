@@ -1,2 +1,4 @@
 # JavaViCare
-Gateway ID: In the App see my communication module in the settings sections for the serial number of the gateway
+This is a Java API to connect to the Viessmann Vicare Service.
+The following devices are yet implemented:
+- GasBoiler
