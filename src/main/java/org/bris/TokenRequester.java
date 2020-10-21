@@ -41,7 +41,7 @@ public class TokenRequester {
         Request request2 = new Request.Builder()
         		.url("https://iam.viessmann.com/idp/v1/token")
         		.addHeader("Content-Type", "application/x-www-form-urlencoded")
-        		.addHeader("Authorization", "Basic Nzk3NDIzMTllMzkyNDVkZTVmOTFkMTVmZjRjYWMyYTg6OGFkOTdhY2ViOTJjNTg5MmUxMDJiMDkzYzdjMDgzZmE=")
+        		.addHeader("Authorization", createAuthHeaderString(configuration.getProperty("vicare.client.id"), configuration.getProperty("vicare.client.secret")))
         		.post(body)
         		.build();
         Response response = client.newCall(request2).execute();

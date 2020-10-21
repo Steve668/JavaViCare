@@ -7,11 +7,11 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 class TestConfiguration {
-	Configuration config;
-	ViCareService vicareService;
+	static Configuration config;
+	static ViCareService vicareService;
 
 	@BeforeAll
-	void init() {
+	static void init() {
 		config = new Configuration("service.config");
 		Assert.assertNotNull(config);
 		vicareService = new ViCareService(config);
