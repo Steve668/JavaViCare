@@ -3,6 +3,7 @@ package org.bris;
 public class ViCareGasBoiler extends VicareDevice {
 
 	
+	private static final String HEATING_POWER_CONSUMPTION_TOTAL = "heating.power.consumption.total";
 	private static final String HEATING_GAS_CONSUMPTION_HEATING = "heating.gas.consumption.heating";
 	private static final String HEATING_GAS_CONSUMPTION_DHW = "heating.gas.consumption.dhw";
 	
@@ -86,8 +87,36 @@ public class ViCareGasBoiler extends VicareDevice {
 		return super.getService().getProperty("heating.boiler.sensors.temperature.main", "value");
 	}
 
-	public String getCurrentPower() {
-		return super.getService().getProperty("heating.burner.current.power", "value");
+	public String getPowerConsumptionDays() {
+		return super.getService().getProperty(HEATING_POWER_CONSUMPTION_TOTAL, "day");
+	}
+	
+	public String getPowerConsumptionToday() {
+		return super.getService().getProperty(HEATING_POWER_CONSUMPTION_TOTAL, "day", 0);
+	}
+	
+	public String getPowerConsumptionWeeks() {
+		return super.getService().getProperty(HEATING_POWER_CONSUMPTION_TOTAL, "week");
+	}
+	
+	public String getPowerConsumptionThisWeek() {
+		return super.getService().getProperty(HEATING_POWER_CONSUMPTION_TOTAL, "week", 0);
+	}
+	
+	public String getPowerConsumptionMonths() {
+		return super.getService().getProperty(HEATING_POWER_CONSUMPTION_TOTAL, "month");
+	}
+	
+	public String getPowerConsumptionThisMonth() {
+		return super.getService().getProperty(HEATING_POWER_CONSUMPTION_TOTAL, "month", 0);
+	}
+	
+	public String getPowerConsumptionYears() {
+		return super.getService().getProperty(HEATING_POWER_CONSUMPTION_TOTAL, "year");
+	}
+	
+	public String getPowerConsumptionThisYear() {
+		return super.getService().getProperty(HEATING_POWER_CONSUMPTION_TOTAL, "year", 0);
 	}
 
 	public String getBurnerHours() {

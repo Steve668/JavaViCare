@@ -115,8 +115,43 @@ class ViCareGasBoilerTest {
 	}
 
 	@Test
-	void testGetCurrentPower() {
-		Assert.assertNotNull(boiler.getCurrentPower());
+	void getPowerConsumptionDays() {
+		Assert.assertNotNull(boiler.getPowerConsumptionDays());
+	}
+	
+	@Test
+	void getPowerConsumptionToday() {
+		Assert.assertNotNull(boiler.getPowerConsumptionToday());
+	}
+	
+	@Test
+	void getPowerConsumptionWeeks() {
+		Assert.assertNotNull(boiler.getPowerConsumptionWeeks());
+	}
+	
+	@Test
+	void getPowerConsumptionThisWeek() {
+		Assert.assertNotNull(boiler.getPowerConsumptionThisWeek());
+	}
+	
+	@Test
+	void getPowerConsumptionMonths() {
+		Assert.assertNotNull(boiler.getPowerConsumptionMonths());
+	}
+	
+	@Test
+	void getPowerConsumptionThisMonth() {
+		Assert.assertNotNull(boiler.getPowerConsumptionThisMonth());
+	}
+	
+	@Test
+	void getPowerConsumptionYears() {
+		Assert.assertNotNull(boiler.getPowerConsumptionYears());
+	}
+	
+	@Test
+	void getPowerConsumptionThisYear() {
+		Assert.assertNotNull(boiler.getPowerConsumptionThisYear());
 	}
 
 	@Test
