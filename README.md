@@ -9,7 +9,7 @@ The following devices are implemented:
 ## Usage
 Add your username and password from your Viessmann-App to the configuration file and start exploring the values of your heating.
 
-##Known issues
+## Known issues
 Getting current power consumption results in 404 Not Found.
 
 ## Credit
