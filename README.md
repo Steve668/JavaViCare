@@ -16,8 +16,6 @@ Recently Viessmann has introduced a rate limit on their REST API. If you exceed 
     Limit 1: 120 calls for a time window of 10 minutes
     Limit 2: 1450 calls for a time window of 24 hours
 
-The default scan_interval of 60 seconds will work within these limits. Note however that any additional requests to the API, e.g., by setting the temperature via the integration but also by interacting with the ViCare app also counts into those limits. It is therefore advised to adjust the scan_interval to your usage scenario.
-
 Source: https://www.home-assistant.io/integrations/vicare/
 
 ## Credit
